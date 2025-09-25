@@ -1,0 +1,137 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{times}
+\usepackage[left=2cm, right=2cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{tabto}
+\usepackage[normalem]{ulem}
+\usepackage{fontawesome}
+
+\newcommand{\smallstrut}{
+\rule[-0.5ex]{0pt}{0.8ex}}					% change values if needed
+
+\newcommand{\DATA}[2]{
+\tabto{10cm} #1 \tabto{10.5cm} #2 \\}		% change values if needed
+
+\newcommand{\CAPTION}[1]{
+\begin{minipage}[t]{\textwidth}
+\Large\textbf{\textsc{\smallstrut #1}}		% change values if needed
+\hrule
+\end{minipage}}
+
+\newcommand{\TABULAR}{
+\begin{tabular}{p{1.9cm}p{8cm}}}			% change values if needed
+
+\newcommand{\SUBCAP}[1]{
+\begin{minipage}[t]{.82\textwidth}			% change values if needed
+\textbf{#1}\vspace{3pt}						% change values if needed
+\end{minipage}}
+
+\newcommand{\DESCRIPT}[1]{
+\begin{minipage}[t]{.82\textwidth}			% change values if needed
+\textit{#1}\vspace{5pt}						% change values if needed
+\end{minipage}}
+
+\newcommand{\ENTRY}[1]{
+\begin{minipage}[t]{.015\textwidth}
+\textbullet
+\end{minipage}
+\begin{minipage}[t]{.82\textwidth}			% change values if needed
+\raggedright
+\smallstrut #1 \vspace{6pt}					% change values if needed
+\end{minipage}}
+
+\begin{document}
+
+\begin{flushleft}
+	\Huge\textbf{Firstname Secondname}
+	\normalsize
+	\DATA{\faMapMarker}{Main Street 1, 01234 New York}
+	\DATA{\faAt}{email@address.com}
+	\DATA{\faPhone}{01234 5678901}
+	\DATA{\faCalendar}{01.01.2002 in Berlin}
+\end{flushleft}
+
+
+\CAPTION{Education and Career}
+
+\TABULAR
+
+10/2025- now & \SUBCAP{Job Title}
+	\DESCRIPT{Company Name, City, Country}
+	\ENTRY{words content information words content, information words content information words content information}
+	\ENTRY{some more content, information, words}
+\\
+
+10/2023- 09/2025 & \SUBCAP{Master of Science: Field of Study}
+	\DESCRIPT{Full Name of University, City, Country}
+	\ENTRY{content information words content, information words}
+	\ENTRY{some more words content information words content, information words content}
+\\
+
+10/2020- 09/2023 & \SUBCAP{Bachelor of Science: Field of Study}
+	\DESCRIPT{Full Name of University, City, Country}
+	\ENTRY{words content information words content, information words content}
+	\ENTRY{some more content information words content, information words}
+\\
+
+\end{tabular}
+
+
+\CAPTION{Main Skillset}
+
+\TABULAR
+
+\textbf{Aspect1} & \DESCRIPT{More detailed description of the aspect}
+	\ENTRY{words content information words content, information words content words}
+	\ENTRY{some more content information words content, information}
+	\ENTRY{some more content information words content}
+\\
+
+\textbf{Aspect2} & \DESCRIPT{More detailed description of the aspect}
+	\ENTRY{words content information words content, information words content}
+	\ENTRY{some more content information words content}
+\\
+
+\textbf{Aspect3} & \DESCRIPT{More detailed description of the aspect}
+	\ENTRY{information words content information words content, information words content}
+	\ENTRY{some more content information words}
+	\ENTRY{words content information words content, information words content}
+\\
+
+\textbf{Aspect4} & \DESCRIPT{More detailed description of the aspect}
+	\ENTRY{content words content information words content, information words content}
+	\ENTRY{some more content information content, words}
+	\ENTRY{words content information words content}
+\\
+
+\end{tabular}
+
+
+\CAPTION{Additional Information}
+
+\TABULAR
+
+\textbf{Info1} &
+	\ENTRY{information words content information words content, information words content}
+	\ENTRY{some more content words content, words words content}
+\\
+
+\textbf{Info2} &
+	\ENTRY{words content information words content, information words content}
+	\ENTRY{some more words content information}
+\\
+
+\textbf{Info3} &
+	\ENTRY{content information words words, information words content}
+	\ENTRY{some more content information}
+\\
+
+\end{tabular}
+
+\pagenumbering{gobble}
+
+\end{document}
+
